@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "806645ff-c337-43b7-8cee-fb02e45c7501",
+		"name": "Hidrologia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3386137",
+		"_collection_link": "https://bold-astronaut-230503.postman.co/workspace/Hidrologia_Pythom~c234490d-5f1e-4c51-bca0-5dd01fa88fbe/collection/3386137-806645ff-c337-43b7-8cee-fb02e45c7501?action=share&source=collection_link&creator=3386137"
+	},
+	"item": [
+		{
+			"name": "Reservatorios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hidrologia/reservatorios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hidrologia",
+						"reservatorios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReservatorioById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hidrologia/reservatorios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hidrologia",
+						"reservatorios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservatório Grandezas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hidrologia/reservatorios/:idReservatorio/:grandeza?Inicio=2024-03-01T00:00:00&Fim=2024-03-31T23:59:59&Intervalo=HO",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hidrologia",
+						"reservatorios",
+						":idReservatorio",
+						":grandeza"
+					],
+					"query": [
+						{
+							"key": "Inicio",
+							"value": "2024-03-01T00:00:00"
+						},
+						{
+							"key": "Fim",
+							"value": "2024-03-31T23:59:59"
+						},
+						{
+							"key": "Intervalo",
+							"value": "HO",
+							"description": "DI, HO"
+						}
+					],
+					"variable": [
+						{
+							"key": "idReservatorio",
+							"value": "JEUITP",
+							"description": "AMUHBB, PPCAPI,JEUITP"
+						},
+						{
+							"key": "grandeza",
+							"value": "defluencia",
+							"description": "afluencia, defluencia, nivelJusante, nivelMontante, vazaoOutrasEstruturas, vazaoTurbinada, vazaoVertida, volumeUtil"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Grandezars Hidrologicas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/hidrologia/GrandezasHidrologicas?IDPostoReservatorio=GRFURN&IDPostoReservatorio=GRCAMA&Grandeza=VNA&DataInicialMedicao=01/01/2024&DataFinalMedicao=20/10/2024&QualidadeDado=COO&AgregacaoTemporal=DI&IDPostoReservatorio=DCAIMO",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"hidrologia",
+						"GrandezasHidrologicas"
+					],
+					"query": [
+						{
+							"key": "IDPostoReservatorio",
+							"value": "GRFURN"
+						},
+						{
+							"key": "IDPostoReservatorio",
+							"value": "GRCAMA"
+						},
+						{
+							"key": "Grandeza",
+							"value": "VNA",
+							"description": "NIV, NIJ, VUT, AFL, TUR, VER, VOE, DFL, VTR, VNA, VAR, VNM, VEL, VUC, NIJ, VAR, VEL, VUC"
+						},
+						{
+							"key": "DataInicialMedicao",
+							"value": "01/01/2024"
+						},
+						{
+							"key": "DataFinalMedicao",
+							"value": "20/10/2024"
+						},
+						{
+							"key": "QualidadeDado",
+							"value": "COO",
+							"description": "Sempre COO"
+						},
+						{
+							"key": "AgregacaoTemporal",
+							"value": "DI",
+							"description": "Somente DI"
+						},
+						{
+							"key": "IDPostoReservatorio",
+							"value": "DCAIMO"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
